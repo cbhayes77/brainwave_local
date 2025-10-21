@@ -1,6 +1,5 @@
 // STEP 1: Pull in React's useState hook so the UI can react to user choices
 import { useState } from "react";
-import "./App.css";
 
 // STEP 2: Define and export our main component (default export so main.jsx can import it)
 function App() {
@@ -13,13 +12,13 @@ function App() {
     <>
       {/* // Layout wrapper: // - min-h-full: take at least the viewport height // - flex + items-center + justify-center:
       center the card on screen // - p-6: page padding */}
-      <div className="min-h-full flex items-center justify-center p-6">
+      <div className="min-h-full flex items-center text-center justify-center p-6">
         {/* Card container:
           - max-w-xl w-full: responsive width up to ~36rem
           - bg-[--color-card]: use our token from index.css via CSS var
           - border/rounded/backdrop: frosted glass look
       */}
-        <div className="max-w-xl w-full bg-[--color-card] border border-white/10 p-8 rounded-2xl backdrop-blur-sm">
+        <div className="max-w-xl w-full bg-[var(--color-card)] border border-white/10 p-8 rounded-2xl backdrop-blur-sm">
           {/* Heading:
             - text size is controlled by state (text-xl..text-5xl)
             - font-semibold text-white: simple type style
